@@ -1,0 +1,36 @@
+version: "3.9"
+
+volumes:
+  mysql_data:
+    driver: local
+    name: mysql_data
+
+networks:
+  databases:
+    driver: bridge
+    name: backend
+
+services:
+  mysql:
+    image: rmm_mysql
+    hostname: RMM_database
+    container_name: db_mysql8
+    env_file:
+      - ./config/.env.dev
+    tty: true
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    networks:
+      - databases
+    volumes:
+      - mysql_data:/var/lib/mysql
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 2048M
+        reservations:
+          cpus: '0.25'
+          memory: 512M
+

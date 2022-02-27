@@ -52,6 +52,26 @@ ou se preferir deixei um bash fazendo estes processos em `./bin`
 $ ./bin/gen.sh
 ```
 
+## Usando bando de dados de exemplo
+
+Em `src/Entity` tem alguns exemplos funcionais que podem ser alterados em `tests/index.php`.
+
+Para brincar com estes exemplos precisa de um banco de dados instalado com o Sakila Mysql ou pode usar Docker, deixei preparado na pasta `.docker/`
+
+Para fazer o build pode rodar bashs com os processos em `./bin/`, mas claro precisa ter o Docker instalado
+
+``` bash
+$ ./bin/docker-build.sh
+```
+Para subir um container a partir da imagem criada
+
+``` bash
+$ ./bin/docker-up.sh
+```
+
+Terminado com sucesso, verifique se o arquivo `./.docker/config/env.dev` possui as mesmas credenciais do arquivo `./config/config.php`
+
+
 ## Licença
 
 É gratuito sob licença MIT e para mais informações veja [aqui](LICENSE).

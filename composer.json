@@ -60,5 +60,8 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "process-timeout": 900
+    },
+    "scripts": {
+        "start": "php -S 127.0.0.1:8000 -t ./tests"
     }
 }
