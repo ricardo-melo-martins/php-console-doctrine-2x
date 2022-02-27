@@ -1,0 +1,63 @@
+{
+    "name": "ricardo-melo-martins/php-console-doctrine-2x",
+    "type": "library",
+    "description": "Pacote de testes por terminal usando Doctrine 2.x",
+    "keywords": [
+        "PHP",
+        "Doctrine",
+        "ORM"
+    ],
+    "homepage": "https://github.com/ricardo-melo-martins/php-console-doctrine-2x",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ricardo Melo Martins",
+            "homepage": "https://github.com/ricardo-melo-martins",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+		"source": "https://github.com/ricardo-melo-martins/php-console-doctrine-2x",
+		"issues": "https://github.com/ricardo-melo-martins/php-console-doctrine-2x/issues"
+    },
+    "platform": {
+        "php": "7.3.0"
+    },
+    "require": {
+        "php": ">=7.3",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-libxml": "*",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "doctrine/annotations": "^1.13",
+        "doctrine/cache": "^1.12.1",
+        "doctrine/doctrine-laminas-hydrator": "^2.2",
+        "doctrine/migrations": "^3.4",
+        "doctrine/orm": "^2.11"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "RMM\\": "src"
+        },
+        "files": [
+            "kernel/paths.php"    
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RMM\\": "tests"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.3.0"
+        },
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "process-timeout": 900
+    }
+}
