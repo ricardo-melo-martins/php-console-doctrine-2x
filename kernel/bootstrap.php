@@ -23,25 +23,14 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
 // Configuração simples para iniciar Doctrine ORM
-$isDevMode = true;
-$proxyDir = null;
-$cache = null;
-$useSimpleAnnotationReader = false;
-$paths = [dirname(__DIR__) . DS .'src'. DS .'Entity'];
 
-$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, $proxyDir, $cache, $useSimpleAnnotationReader);
+$cfg = \Laminas\Config\Factory::fromFile(PATH_CONFIG . 'config.php');
 
 //Parâmetros de conexão com banco de dados
-$params = array(
-    'dbname' => 'sakila',
-    'user' => 'sakila',
-    'password' => 'sakila',
-    'host' => 'localhost',
-    'driver' => 'pdo_mysql',
-);
+$setupAnnotations = Setup::createAnnotationMetadataConfiguration($cfg['path_entity'], $cfg['dev_mode'], $cfg['proxy'], $cfg['cache'], $cfg['use_simple_annotation']);
 
 // Obter a instância da classe Entity Manager
-$entityManager = EntityManager::create($params, $config);
+$entityManager = EntityManager::create($cfg['doctrine'], $setupAnnotations);
 
 // Definições de tipagem e mapeamento dos campos
 $entityManager->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('set', 'string');

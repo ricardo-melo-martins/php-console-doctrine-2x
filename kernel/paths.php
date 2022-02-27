@@ -1,4 +1,13 @@
 <?php
+/**
+ * paths.php 
+ * Arquivo de definições 
+ * 
+ * @link          https://github.com/ricardo-melo-martins
+ * @author        Ricardo Melo Martins
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
+ */
+
 // defines comuns para diretórios
 if (!defined('DS'))          { define('DS', DIRECTORY_SEPARATOR); }
 if (!defined('PATH_ROOT'))   { define('PATH_ROOT', dirname(__DIR__)); }
