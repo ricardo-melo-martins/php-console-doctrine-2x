@@ -27,8 +27,30 @@ Deverá retornar a versão e uma lista de comando para utilizar o Doctrine
 
 ``` bash
 $ Doctrine Command Line Interface 2.11.1.0
+...
 ```
 
+
+## Engenharia reversa
+
+A versão 2.x ainda suporta, mas deve ser removida na 3.x
+
+Segue abaixo um comando para gerar o mapeamento das tabelas, desde que as tabelas tenham "Primary Keys"
+
+``` bash
+$ vendor/bin/doctrine orm:convert-mapping --force --from-database annotation ./src/Entity/
+```
+E o comando para sobreescrever as entidades
+
+``` bash
+$ vendor/bin/doctrine orm:generate-entities ./src/Entity/ --generate-annotations=true
+```
+
+ou se preferir deixei um bash fazendo estes processos em `./bin`
+
+``` bash
+$ ./bin/gen.sh
+```
 
 ## Licença
 
