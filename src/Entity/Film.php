@@ -4,6 +4,7 @@ namespace RMM\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use RMM\Entity\Actor;
 use RMM\Entity\Language;
 
 /**
@@ -40,7 +41,7 @@ class Film
     /**
      * @var \DateTime|null
      *
-     * @ORM\Column(name="release_year", type="date", nullable=true)
+     * @ORM\Column(name="release_year", type="string", nullable=true)
      */
     private $releaseYear;
 
@@ -398,11 +399,11 @@ class Film
     /**
      * Set language.
      *
-     * @param \Language|null $language
+     * @param Language|null $language
      *
      * @return Film
      */
-    public function setLanguage(\Language $language = null)
+    public function setLanguage(Language $language = null)
     {
         $this->language = $language;
 
@@ -412,7 +413,7 @@ class Film
     /**
      * Get language.
      *
-     * @return \Language|null
+     * @return Language|null
      */
     public function getLanguage()
     {
@@ -422,11 +423,11 @@ class Film
     /**
      * Set originalLanguage.
      *
-     * @param \Language|null $originalLanguage
+     * @param Language|null $originalLanguage
      *
      * @return Film
      */
-    public function setOriginalLanguage(\Language $originalLanguage = null)
+    public function setOriginalLanguage(Language $originalLanguage = null)
     {
         $this->originalLanguage = $originalLanguage;
 
@@ -436,7 +437,7 @@ class Film
     /**
      * Get originalLanguage.
      *
-     * @return \Language|null
+     * @return Language|null
      */
     public function getOriginalLanguage()
     {
@@ -446,11 +447,11 @@ class Film
     /**
      * Add actor.
      *
-     * @param \Actor $actor
+     * @param Actor $actor
      *
      * @return Film
      */
-    public function addActor(\Actor $actor)
+    public function addActor(Actor $actor)
     {
         $this->actor[] = $actor;
 
@@ -460,11 +461,11 @@ class Film
     /**
      * Remove actor.
      *
-     * @param \Actor $actor
+     * @param Actor $actor
      *
      * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
-    public function removeActor(\Actor $actor)
+    public function removeActor(Actor $actor)
     {
         return $this->actor->removeElement($actor);
     }
@@ -482,11 +483,11 @@ class Film
     /**
      * Add category.
      *
-     * @param \Category $category
+     * @param Category $category
      *
      * @return Film
      */
-    public function addCategory(\Category $category)
+    public function addCategory(Category $category)
     {
         $this->category[] = $category;
 
@@ -496,11 +497,11 @@ class Film
     /**
      * Remove category.
      *
-     * @param \Category $category
+     * @param Category $category
      *
      * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
-    public function removeCategory(\Category $category)
+    public function removeCategory(Category $category)
     {
         return $this->category->removeElement($category);
     }

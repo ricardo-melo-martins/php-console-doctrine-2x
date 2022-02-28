@@ -36,3 +36,4 @@ $entityManager = EntityManager::create($cfg['doctrine'], $setupAnnotations);
 $entityManager->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('set', 'string');
 $entityManager->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
 $entityManager->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('geometry', 'string');
+$entityManager->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('year', 'string');
