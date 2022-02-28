@@ -4,6 +4,8 @@ namespace RMM\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use RMM\Entity\Film;
+
 /**
  * Category
  *
@@ -112,11 +114,11 @@ class Category
     /**
      * Add film.
      *
-     * @param \Film $film
+     * @param Film $film
      *
      * @return Category
      */
-    public function addFilm(\Film $film)
+    public function addFilm(Film $film)
     {
         $this->film[] = $film;
 
@@ -126,11 +128,11 @@ class Category
     /**
      * Remove film.
      *
-     * @param \Film $film
+     * @param Film $film
      *
      * @return boolean TRUE if this collection contained the specified element, FALSE otherwise.
      */
-    public function removeFilm(\Film $film)
+    public function removeFilm(Film $film)
     {
         return $this->film->removeElement($film);
     }

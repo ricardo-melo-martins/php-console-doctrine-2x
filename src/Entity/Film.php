@@ -4,6 +4,8 @@ namespace RMM\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use RMM\Entity\Language;
+
 /**
  * Film
  *
@@ -92,7 +94,7 @@ class Film
     private $lastUpdate = 'CURRENT_TIMESTAMP';
 
     /**
-     * @var \Language
+     * @var Language
      *
      * @ORM\ManyToOne(targetEntity="Language")
      * @ORM\JoinColumns({
@@ -102,7 +104,7 @@ class Film
     private $language;
 
     /**
-     * @var \Language
+     * @var Language
      *
      * @ORM\ManyToOne(targetEntity="Language")
      * @ORM\JoinColumns({
