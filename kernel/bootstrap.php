@@ -23,8 +23,13 @@ use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
 
 // Configuração simples para iniciar Doctrine ORM
-
-$cfg = \Laminas\Config\Factory::fromFile(PATH_CONFIG . 'config.php');
+// config
+if (file_exists(PATH_CONFIG . 'config.php')) {
+    $cfg = \Laminas\Config\Factory::fromFile(PATH_CONFIG . 'config.php');
+} else {
+    echo 'Ops, esqueceu da configuração';
+    exit;
+}
 
 //Parâmetros de conexão com banco de dados
 $setupAnnotations = Setup::createAnnotationMetadataConfiguration($cfg['path_entity'], $cfg['dev_mode'], $cfg['proxy'], $cfg['cache'], $cfg['use_simple_annotation']);

@@ -35,7 +35,8 @@
         "doctrine/doctrine-laminas-hydrator": "^2.2",
         "doctrine/migrations": "^3.4",
         "doctrine/orm": "^2.11",
-        "laminas/laminas-config": "^3.7"
+        "laminas/laminas-config": "^3.7",
+        "symfony/console": "^5.4"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.4"
