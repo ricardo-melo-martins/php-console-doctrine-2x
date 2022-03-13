@@ -12,7 +12,6 @@
 if (!defined('DS'))          { define('DS', DIRECTORY_SEPARATOR); }
 if (!defined('PATH_ROOT'))   { define('PATH_ROOT', dirname(__DIR__)); }
 if (!defined('PATH_APP'))    { define('PATH_APP', 'src'); }
-if (!defined('PATH_APP'))    { define('PATH_APP', PATH_ROOT . DS . PATH_APP . DS); }
 if (!defined('PATH_CONFIG')) { define('PATH_CONFIG', PATH_ROOT . DS . 'config' . DS); }
 if (!defined('PATH_TESTS'))  { define('PATH_TESTS', PATH_ROOT . DS . 'tests' . DS); }
 if (!defined('PATH_TMP'))    { define('PATH_TMP', PATH_ROOT . DS . 'tmp' . DS); }
