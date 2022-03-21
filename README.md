@@ -54,6 +54,8 @@ Rodando para consultas com http
 $ composer start
 ```
 
+e então abra a URL `http://127.0.0.1:8000` no navegador.
+
 ## Engenharia reversa
 
 A versão 2.x ainda suporta, mas deve ser removida na 3.x
