@@ -29,7 +29,30 @@ Deverá retornar a versão e uma lista de comando para utilizar o Doctrine
 $ Doctrine Command Line Interface 2.11.1.0
 ...
 ```
+Rodando o teste de terminal
 
+``` bash
+$ composer cli
+```
+Deve conter na saída do terminal
+
+```
+...
+Available commands:
+  actor       Encontra um ator por id
+...
+```
+Rodando com o comando `Actor` e `id`
+
+``` bash
+$ composer cli actor 1
+```
+
+Rodando para consultas com http
+
+``` bash
+$ composer start
+```
 
 ## Engenharia reversa
 
