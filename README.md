@@ -83,7 +83,7 @@ ou se preferir deixei um bash fazendo estes processos em `./bin`
 $ ./bin/gen.sh
 ```
 
-## Usando bando de dados de exemplo
+## Usando banco de dados de exemplo
 
 Em `src/Entity` tem alguns exemplos funcionais que podem ser alterados em `tests/index.php`.
 
